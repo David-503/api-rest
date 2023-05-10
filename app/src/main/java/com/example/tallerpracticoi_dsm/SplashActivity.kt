@@ -9,10 +9,10 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-     //   Handler().postDelayed({
+        Handler().postDelayed({
             val intent = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
-      //  }, 20000) // espera 2 segundos antes de pasar a MainActivity
+        }, 3000) // espera 2 segundos antes de pasar a MainActivity
     }
 }
