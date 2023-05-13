@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.example.tallerpracticoi_dsm.schedules.CitesList
+import com.example.tallerpracticoi_dsm.scholar.Scholar
+
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BottomMenu : Fragment() {
@@ -15,7 +17,7 @@ class BottomMenu : Fragment() {
 
     // Declaracion de variables
     private lateinit var bottomNavigationBar: BottomNavigationView
-
+    //HomeFragment homeFragment = new HomeFragment();
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -39,19 +41,28 @@ class BottomMenu : Fragment() {
             when (it.itemId) {
                 R.id.home -> {
                     startActivity(Intent(activity, BottomNavigationActivity::class.java))
-                    activity?.overridePendingTransition(0,0)
-                    true
-                }
-
-                R.id.cites -> {
-                   val i = Intent(requireContext(), CitesList::class.java)
-                    i.putExtra("itemMenuSelected", R.id.cites)
+                    val i = Intent(requireContext(), Scholar::class.java)
+                    i.putExtra("itemMenuSelected", R.id.home)
                     startActivity(i)
                     activity?.overridePendingTransition(0,0)
+                    true
+
+                }
+
+                R.id.profesor -> {
+                    val i = Intent(requireContext(), Scholar::class.java)
+                    i.putExtra("itemMenuSelected", R.id.home)
+                    startActivity(i)
+
+
+                 //   activity?.overridePendingTransition(0,0)
                     true
                 }
 
                 R.id.setting -> {
+                    val i = Intent(requireContext(), Scholar::class.java)
+                    i.putExtra("itemMenuSelected", R.id.home)
+                    startActivity(i)
                     Toast.makeText(activity, "Setting", Toast.LENGTH_SHORT).show()
                     true
                 }

@@ -12,5 +12,6 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Sweet Wait"
+rootProject.name = "Api-Rest"
 include ':app'
+include ':mylibrary'

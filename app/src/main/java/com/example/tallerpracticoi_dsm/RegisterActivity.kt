@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import com.example.tallerpracticoi_dsm.schedules.CitesList
+import com.example.tallerpracticoi_dsm.scholar.Scholar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 
@@ -109,8 +110,8 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun showHome(email:String?,provider:originType){
-        val i = Intent(this@RegisterActivity, CitesList::class.java)
-        i.putExtra("itemMenuSelected", R.id.cites)
+        val i = Intent(this@RegisterActivity, Scholar::class.java)
+        i.putExtra("itemMenuSelected", R.id.home)
         i.putExtra("email", email)
         i.putExtra("provider", provider)
         startActivity(i)

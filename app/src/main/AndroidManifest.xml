@@ -16,6 +16,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CreateScholar"
+            android:exported="false" />
+        <activity
+            android:name=".Scholar"
+            android:exported="false" />
+        <activity
             android:name=".gitHubLogin"
             android:exported="false" />
         <activity
@@ -23,7 +29,7 @@
             android:exported="false" />
         <activity
             android:name=".schedules.CitesList"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".BottomNavigationActivity"
             android:exported="true">
@@ -40,6 +46,12 @@
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".scholar.Scholar"
+            android:exported="true" />
+        <activity
+            android:name=".scholar.CreateScholar"
             android:exported="true" />
         <activity
             android:name=".SplashActivity"

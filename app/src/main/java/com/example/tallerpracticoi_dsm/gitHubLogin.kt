@@ -133,7 +133,7 @@ class gitHubLogin : AppCompatActivity() {
     }
     private fun showHome(email:String?,provider:originType){
         val i = Intent(this@gitHubLogin, CitesList::class.java)
-        i.putExtra("itemMenuSelected", R.id.cites)
+        i.putExtra("itemMenuSelected", R.id.home)
         i.putExtra("email", email)
         i.putExtra("provider", provider.toString())
         startActivity(i)

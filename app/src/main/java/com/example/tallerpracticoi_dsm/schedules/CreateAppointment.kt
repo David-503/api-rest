@@ -122,7 +122,7 @@ class CreateAppointment : AppLayout() {
         // Floating Button
         binding.btnReturn.setOnClickListener {
             val intent = Intent(this, CitesList::class.java)
-            intent.putExtra("itemMenuSelected", R.id.cites)
+            intent.putExtra("itemMenuSelected", R.id.home)
             startActivity(intent)
         }
     }

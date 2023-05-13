@@ -48,7 +48,7 @@ class CitesList : AppLayout() {
 
         binding.newSchedule.setOnClickListener {
             val intent = Intent(this, CreateAppointment::class.java)
-            intent.putExtra("itemMenuSelected", R.id.cites)
+            intent.putExtra("itemMenuSelected", R.id.home)
             startActivity(intent)
         }
     }

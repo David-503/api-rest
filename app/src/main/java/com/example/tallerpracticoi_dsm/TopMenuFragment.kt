@@ -47,9 +47,17 @@ class TopMenuFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_top_menu, container, false)
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val preps = activity?.getSharedPreferences(getString(R.string.preps_file),Context.MODE_PRIVATE)
+        val emailProps: String? = preps?.getString("email",null)
+        val providerProps: String? = preps?.getString("provider",null)
+        if(emailProps != null && providerProps != null){
+            email = emailProps;
+            origin = enumValueOf<originType>(providerProps)
+        }
         super.onViewCreated(view, savedInstanceState)
         logoutButton =requireView().findViewById(R.id.btn_logout)
         logoutButton!!.setOnClickListener { logOut() }

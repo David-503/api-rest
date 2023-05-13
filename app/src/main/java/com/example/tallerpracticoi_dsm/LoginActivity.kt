@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.example.tallerpracticoi_dsm.schedules.CitesList
+import com.example.tallerpracticoi_dsm.scholar.Scholar
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -46,7 +47,6 @@ class LoginActivity : AppCompatActivity() {
         loginBtn!!.setOnClickListener { loginUserAccount() }
         btnGoogle!!.setOnClickListener { loginGoogleAccount() }
         btnGitHub!!.setOnClickListener { loginGitHubAccount() }
-
         registerQuestion!!.setOnClickListener {redirectRegisterActivity()}
         //Verifica si hay una sesión
         this.checkUser();
@@ -60,6 +60,10 @@ class LoginActivity : AppCompatActivity() {
 
         progressBar = findViewById<ProgressBar>(R.id.progressBar)
         registerQuestion = findViewById<Button>(R.id.registerQuestionView)
+
+        btnGoogle?.visibility = View.INVISIBLE;
+        btnGitHub?.visibility = View.INVISIBLE;
+
 
     }
     private fun loginUserAccount() {
@@ -149,8 +153,8 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun showHome(email:String?,provider:originType){
-        val i = Intent(this@LoginActivity, CitesList::class.java)
-        i.putExtra("itemMenuSelected", R.id.cites)
+        val i = Intent(this@LoginActivity, Scholar::class.java)
+        i.putExtra("itemMenuSelected", R.id.home)
         i.putExtra("email", email)
         i.putExtra("provider", provider.toString())
         startActivity(i)

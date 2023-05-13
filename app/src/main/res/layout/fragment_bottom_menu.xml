@@ -11,9 +11,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_bar"
         android:background="@drawable/bottom_navigation_shape"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
         app:itemTextColor="@drawable/bottom_navigation_selector"
-        app:itemIconTint="@drawable/bottom_navigation_selector" />
+        app:menu="@menu/menu_bar" />
 
 </FrameLayout>
