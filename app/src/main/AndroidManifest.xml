@@ -16,10 +16,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".CreateScholar"
+            android:name=".CreateTeacher"
             android:exported="false" />
         <activity
-            android:name=".Scholar"
+            android:name=".teacher.Teacher"
+            android:exported="false" />
+        <activity
+            android:name=".scholar.CreateScholar"
+            android:exported="false" />
+        <activity
+            android:name=".scholar.Scholar"
             android:exported="false" />
         <activity
             android:name=".gitHubLogin"
@@ -48,11 +54,8 @@
             android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".scholar.Scholar"
-            android:exported="true" />
-        <activity
-            android:name=".scholar.CreateScholar"
-            android:exported="true" />
+        android:name=".teacher.CreateTeacher"
+        android:exported="true" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"

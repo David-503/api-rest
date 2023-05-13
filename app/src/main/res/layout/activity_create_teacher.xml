@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".teacher.CreateTeacher">
+
+
+    <FrameLayout
+        android:id="@+id/frameTopMenu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/frameTopMenu"
+        app:layout_constraintBottom_toTopOf="@id/frameBottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="150dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/firstRow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profesor"
+                android:textSize="25dp"
+                android:textColor="@color/black_soft"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agregar nuevo Profesor"
+                android:textSize="15dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/grey"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/secondRowItem1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/middle_child"
+            app:layout_constraintTop_toBottomOf="@id/firstRow"
+            app:layout_constraintBottom_toBottomOf="@id/secondRowItem2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/labelStartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Nombre"
+                />
+            <EditText
+                android:id="@+id/editTextNombreP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:hint="Escriba su nombre"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/secondRowItem2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/middle_child"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/secondRowItem1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/labelEndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:text="Apellido"
+                />
+            <EditText
+                android:id="@+id/editTextApellidoP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:hint="Escriba su apellido"
+                android:enabled="true"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondRowItem1"
+            android:orientation="vertical"
+            android:layout_marginVertical="20dp"
+            >
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edad" />
+
+            <EditText
+                android:id="@+id/editTextNumberP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number"
+                android:hint="18"
+                />
+
+            <Button
+                android:id="@+id/btnCreateProfesor"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_end_schedule"
+                app:backgroundTint="@color/pink_soft"
+                android:backgroundTint="@color/pink_soft"
+                android:foregroundTint="@color/white"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/middle_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnReturn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:backgroundTint="@color/white"
+        android:contentDescription="@string/cite_create"
+        android:foregroundTint="@color/pink_soft"
+        android:src="@drawable/baseline_arrow_circle_left_24"
+        app:borderWidth="0dp"
+        app:elevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/frameBottomMenu"
+        app:layout_constraintLeft_toLeftOf="@id/middle"
+        app:layout_constraintRight_toRightOf="@id/middle"
+        app:layout_constraintTop_toTopOf="@+id/frameBottomMenu"
+        app:maxImageSize="52dp"
+        app:rippleColor="@color/pink_soft"
+        app:tint="@null" />
+
+    <FrameLayout
+        android:id="@+id/frameBottomMenu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

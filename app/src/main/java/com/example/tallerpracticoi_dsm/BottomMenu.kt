@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.tallerpracticoi_dsm.schedules.CitesList
 import com.example.tallerpracticoi_dsm.scholar.Scholar
+import com.example.tallerpracticoi_dsm.teacher.Teacher
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -50,8 +51,8 @@ class BottomMenu : Fragment() {
                 }
 
                 R.id.profesor -> {
-                    val i = Intent(requireContext(), Scholar::class.java)
-                    i.putExtra("itemMenuSelected", R.id.home)
+                    val i = Intent(requireContext(), Teacher::class.java)
+                    i.putExtra("itemMenuSelected", R.id.profesor)
                     startActivity(i)
 
 
